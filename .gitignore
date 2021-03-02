@@ -1,0 +1,24 @@
+.DS_Store
+.editorconfig
+node_modules/
+dist/
+_deploy/
+_deploy/public/
+_deploy/public/static/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+_site/
+.sass-cache/
+.jekyll-cache/
+Gemfile.lock
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+.DS_Store
