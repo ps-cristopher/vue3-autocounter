@@ -83,7 +83,7 @@ export default defineComponent({
     this.$emit('mounted');
   },
   unmounted(): void {
-    if (this.animationFrame) window.cancelAnimationFrame(this.animationFrame)
+    this.cancelAnimation();
   },
   watch: {
     startAmount(): void {
@@ -119,6 +119,7 @@ export default defineComponent({
   },
 	methods: {
     start(): void {
+      this.cancelAnimation();
       this.currentStartAmount = this.startAmount;
       this.startTimestamp = null;
       this.currentDuration = this.duration;
@@ -127,7 +128,7 @@ export default defineComponent({
     },
     pause(): void {
       if (this.paused) return;
-      if (this.animationFrame) window.cancelAnimationFrame(this.animationFrame);
+      this.cancelAnimation();
       this.paused = true;
     },
     resume(): void {
@@ -141,7 +142,7 @@ export default defineComponent({
     reset(): void {
       this.paused = false;
       this.startTimestamp = null;
-      if (this.animationFrame) window.cancelAnimationFrame(this.animationFrame);
+      this.cancelAnimation();
       this.currentAmount = this.startAmount;
       if (this.autoinit) this.start();
       else this.paused = true;
@@ -162,7 +163,10 @@ export default defineComponent({
 
       if (progress < this.currentDuration) this.animationFrame = window.requestAnimationFrame(this.counting);
       else this.$emit('finished');
-		}
+		},
+    cancelAnimation(): void {
+      if (this.animationFrame) window.cancelAnimationFrame(this.animationFrame);
+    }
   }
 });
 </script>
