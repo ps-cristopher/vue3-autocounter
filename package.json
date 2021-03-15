@@ -1,6 +1,6 @@
 {
   "name": "vue3-autocounter",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "dist/vue3-autocounter.ssr.js",
   "browser": "dist/vue3-autocounter.esm.js",
