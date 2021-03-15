@@ -13,7 +13,7 @@ interface Data {
   currentDuration: number,
   paused: boolean,
   remaining: number,
-  animationFrame: string
+  animationFrame: number
 }
 
 export default defineComponent({
@@ -63,14 +63,14 @@ export default defineComponent({
   },
 	data(): Data {
 		return {
-      timestamp: null,
-      startTimestamp: null,
+      timestamp: 0,
+      startTimestamp: 0,
 			currentAmount: 0,
       currentStartAmount: 0,
       currentDuration: 0,
       paused: false,
-      remaining: null,
-      animationFrame: null
+      remaining: 0,
+      animationFrame: 0
 		};
 	},
   mounted (): void {
