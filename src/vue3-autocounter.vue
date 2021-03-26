@@ -31,7 +31,10 @@ export default defineComponent({
     },
     duration: {
       type: Number,
-      default: 1000
+      default: 3,
+      validator(duration: number): boolean {
+        return duration >= 1;
+      }
     },
     autoinit: {
       type: Boolean,
@@ -49,7 +52,7 @@ export default defineComponent({
       type: String,
       default: ','
     },
-    decimal: {
+    decimalSeparator: {
       type: String,
       default: '.'
     },
@@ -76,8 +79,8 @@ export default defineComponent({
   mounted (): void {
     this.currentAmount = this.startAmount;
     this.currentStartAmount = this.startAmount;
-    this.currentDuration = this.duration;
-    this.remaining = this.duration;
+    this.currentDuration = this.duration * 1000;
+    this.remaining = this.duration * 1000;
     if (this.autoinit) this.start();
     else this.paused = true;
     this.$emit('mounted');
@@ -90,6 +93,9 @@ export default defineComponent({
       this.reset();
     },
     endAmount(): void {
+      this.reset();
+    },
+    duration(): void {
       this.reset();
     }
   },
@@ -107,14 +113,14 @@ export default defineComponent({
       numberString += '';
       let numberArray:Array<string> = numberString.split('.');
       let numbers: string = numberArray[0];
-      let decimals: string = numberArray.length > 1 ? this.decimal + numberArray[1] : '';
+      let decimals: string = numberArray.length > 1 ? this.decimalSeparator + numberArray[1] : '';
       let isNumber = !isNaN(parseFloat(this.separator));
 
       if (this.separator && !isNumber) {
         while (regex.test(numbers)) numbers = numbers.replace(regex, '$1' + this.separator + '$2');
       }
       
-      return this.prefix + numbers + decimals + this.suffix;
+      return numbers + decimals;
     }
   },
 	methods: {
@@ -122,7 +128,7 @@ export default defineComponent({
       this.cancelAnimation();
       this.currentStartAmount = this.startAmount;
       this.startTimestamp = null;
-      this.currentDuration = this.duration;
+      this.currentDuration = this.duration * 1000;
       this.paused = false;
       this.animationFrame = window.requestAnimationFrame(this.counting);
     },
@@ -162,7 +168,11 @@ export default defineComponent({
       }
 
       if (progress < this.currentDuration) this.animationFrame = window.requestAnimationFrame(this.counting);
-      else this.$emit('finished');
+      else {
+        setTimeout(() => {
+          this.$emit('finished');
+        }, 1000);
+      }
 		},
     cancelAnimation(): void {
       if (this.animationFrame) window.cancelAnimationFrame(this.animationFrame);
