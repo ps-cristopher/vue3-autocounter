@@ -1,6 +1,6 @@
 {
   "name": "vue3-autocounter",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A lightweight Vue 3 component made with TypeScript",
   "author": "Cristopher PS <info@cristopherps.com>",
   "main": "dist/vue3-autocounter.ssr.js",
