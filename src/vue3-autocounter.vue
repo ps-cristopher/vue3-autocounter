@@ -168,11 +168,7 @@ export default defineComponent({
       }
 
       if (progress < this.currentDuration) this.animationFrame = window.requestAnimationFrame(this.counting);
-      else {
-        setTimeout(() => {
-          this.$emit('finished');
-        }, 1000);
-      }
+      else this.$emit('finished');
 		},
     cancelAnimation(): void {
       if (this.animationFrame) window.cancelAnimationFrame(this.animationFrame);
