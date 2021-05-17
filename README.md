@@ -24,11 +24,11 @@
 </p>
 
 <p align='center'>
-  <img src="https://img.shields.io/npm/dt/vue3-autocounter?style=flat"/>
-  <img src=https://img.shields.io/npm/v/vue3-autocounter?style=flat"/>
-  <img src="https://img.shields.io/github/license/ps-cristopher/vue3-autocounter?style=flat"/>
-  <img src="https://img.shields.io/github/languages/top/ps-cristopher/vue3-autocounter?style=flat"/>
-  <img src="https://img.shields.io/github/stars/ps-cristopher/vue3-autocounter?style=flat"/>
+  <img src="https://img.shields.io/npm/dt/vue3-autocounter?style=for-the-badge"/>
+  <img src="https://img.shields.io/npm/v/vue3-autocounter?style=for-the-badge"/>
+  <img src="https://img.shields.io/github/license/ps-cristopher/vue3-autocounter?style=for-the-badge"/>
+  <img src="https://img.shields.io/github/languages/top/ps-cristopher/vue3-autocounter?style=for-the-badge"/>
+  <img src="https://img.shields.io/github/stars/ps-cristopher/vue3-autocounter?style=for-the-badge"/>
 </p>
 
 <p align='center'>
