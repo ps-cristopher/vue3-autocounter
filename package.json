@@ -14,8 +14,8 @@
     "vue-animation",
     "vue-component"
   ],
-  "version": "1.0.4",
-  "description": "A lightweight Vue 3 component made with TypeScript",
+  "version": "1.0.5",
+  "description": "A lightweight Vue 3 component made with TypeScript, you can use it to create an animation that shows an automatic count for any quantity with a specified duration, it can be used for counting up and down.",
   "author": "Cristopher PS <info@cristopherps.com>",
   "main": "dist/vue3-autocounter.ssr.js",
   "browser": "dist/vue3-autocounter.esm.js",
