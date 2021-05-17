@@ -2,10 +2,19 @@
   "name": "vue3-autocounter",
   "keywords": [
     "vue3-autocounter",
+    "autocounter",
     "vue3",
-    "vue"
+    "vue",
+    "vuejs",
+    "counter",
+    "counting",
+    "counto",
+    "countup",
+    "countdown",
+    "vue-animation",
+    "vue-component"
   ],
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A lightweight Vue 3 component made with TypeScript",
   "author": "Cristopher PS <info@cristopherps.com>",
   "main": "dist/vue3-autocounter.ssr.js",
