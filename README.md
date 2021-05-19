@@ -46,14 +46,14 @@ A lightweight Vue 3 component made with TypeScript, you can use it to create an 
 ## Installation
 You can install it easily with NPM.
 
-```
+```sh
 npm install vue3-autocounter
 ```
 
 ## Usage
 Add the vue3-autocounter to your main.js for a global import:
 
-```
+```javascript
 import { createApp } from 'vue';
 import Vue3Autocounter from 'vue3-autocounter';
 import App from './App.vue';
@@ -65,7 +65,7 @@ createApp(App)
 
 If you prefer yo can import it directly in your Single File Component:
 
-```
+```javascript
 import { defineComponent } from 'vue';
 import Vue3autocounter from 'vue3-autocounter';
 
