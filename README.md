@@ -97,5 +97,14 @@ You can also send me a direct message on twitter
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
+## Contributors
+<p align="center">
+  <a href="https://github.com/ps-cristopher/vue3-autocounter/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=ps-cristopher/vue3-autocounter" />
+  </a>
+</p>
+
+Made with [contributors-img](https://contrib.rocks).
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/) License © 2021 [Cristopher PS](https://github.com/ps-cristopher)
