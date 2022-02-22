@@ -1,5 +1,5 @@
 <template>
-	<span>{{displayedAmount}}</span>
+  <span>{{displayedAmount}}</span>
 </template>
 
 <script lang="ts">
@@ -17,8 +17,7 @@ interface Data {
 }
 
 export default defineComponent({
-	name: "Vue3Autocounter",
-  interval: null,
+  name: "Vue3Autocounter",
   props: {
     startAmount: {
       type: Number,
@@ -64,18 +63,18 @@ export default defineComponent({
       }
     }
   },
-	data(): Data {
-		return {
+  data(): Data {
+    return {
       timestamp: 0,
       startTimestamp: 0,
-			currentAmount: 0,
+      currentAmount: 0,
       currentStartAmount: 0,
       currentDuration: 0,
       paused: false,
       remaining: 0,
       animationFrame: 0
-		};
-	},
+    };
+  },
   mounted (): void {
     this.currentAmount = this.startAmount;
     this.currentStartAmount = this.startAmount;
@@ -123,7 +122,7 @@ export default defineComponent({
       return numbers + decimals;
     }
   },
-	methods: {
+  methods: {
     start(): void {
       this.cancelAnimation();
       this.currentStartAmount = this.startAmount;
@@ -169,7 +168,7 @@ export default defineComponent({
 
       if (progress < this.currentDuration) this.animationFrame = window.requestAnimationFrame(this.counting);
       else this.$emit('finished');
-		},
+    },
     cancelAnimation(): void {
       if (this.animationFrame) window.cancelAnimationFrame(this.animationFrame);
     }
