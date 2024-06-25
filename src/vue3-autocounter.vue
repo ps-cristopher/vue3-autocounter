@@ -33,7 +33,7 @@ export default defineComponent({
       type: Number,
       default: 3,
       validator(duration: number): boolean {
-        return duration >= 1;
+        return duration > 0;
       }
     },
     autoinit: {
