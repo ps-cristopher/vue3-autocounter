@@ -90,9 +90,9 @@ Go to <a href="https://vue3autocounter.cristopherps.dev/docs"> full documentatio
 
 ## Support
 Send me an email to
-<a href="mailto:info@cristopherps.com">info@cristopherps.com</a>.
-You can also send me a direct message on twitter
-<a href="https://twitter.com/ps_cristopher">@ps_cristopher</a>.
+<a href="mailto:cristopher.p.s@gmail.com">cristopher.p.s@gmail.com</a>
+You can also send me a direct message on Twitter
+<a href="https://twitter.com/ps_cristopher">@ps_cristopher</a>
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
